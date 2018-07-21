@@ -1,3 +1,7 @@
+% load data files 
+
+
+% load files as desired
 load('Krotov_file.mat')
 Z(:,1) = overlap(1:1000)/max(overlap);
 load('Krotov_file1.mat')
@@ -14,6 +18,8 @@ load('Krotov_file7.mat')
 Z(:,6) = overlap(1:1000)/max(overlap);
 
 
+% specify dimensions for differnet parameters
+
 width = 3.3;     % Width in inches
 height = 2.4;    % Height in inches
 alw = 0.5;    % AxesLineWidth
@@ -21,10 +27,9 @@ fsz = 8;      % Fontsize
 fsz1=7;
 lw = 0.5;      % LineWidth
 msz = 6;       % MarkerSize
-time=5*t;
 
 
-%%
+%% plot and specify control paramaters clearly
 iter = 1:1000;
 figure();
 semilogy(iter,(1-Z(:,1)),'b', 'LineWidth', lw);
@@ -43,6 +48,8 @@ title('(a)')
 xlim([0 900]);
 ylim([1e-8 1e0]);
 
+
+%specify paramters for printing 
 set(gca,'FontName','Times New Roman','FontSize',fsz,'FontWeight','normal')%'FontWeight','bold','LineWidth',1)
 pos = get(gcf, 'Position');
 set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
