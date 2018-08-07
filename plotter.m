@@ -1,7 +1,7 @@
 % load data files 
 
 
-% load files as desired
+% modify the code to load files as desired
 load('Krotov_file.mat')
 Z(:,1) = overlap(1:1000)/max(overlap);
 load('Krotov_file1.mat')
@@ -18,7 +18,7 @@ load('Krotov_file7.mat')
 Z(:,6) = overlap(1:1000)/max(overlap);
 
 
-% specify dimensions for differnet parameters
+% specify dimensions for differnet parameters of figures
 
 width = 3.3;     % Width in inches
 height = 2.4;    % Height in inches
@@ -49,7 +49,7 @@ xlim([0 900]);
 ylim([1e-8 1e0]);
 
 
-%specify paramters for printing 
+%specify paramters for printing figures
 set(gca,'FontName','Times New Roman','FontSize',fsz,'FontWeight','normal')%'FontWeight','bold','LineWidth',1)
 pos = get(gcf, 'Position');
 set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
